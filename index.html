@@ -1,0 +1,685 @@
+﻿
+
+<!DOCTYPE html>
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge,chrome=1">
+    <meta name="renderer" content="webkit" />
+    <title>2026年执业药师考试报名中心</title>
+    <link rel="icon" type="image/css" href="officialImg/logo.png" />
+    <link href="officialCss/reset.css" rel="stylesheet" />
+    <link href="officialCss/style.css" rel="stylesheet" />
+    <!--[if lt IE 9]>
+      <script src="https://cdn.bootcdn.net/ajax/libs/html5shiv/r29/html5.min.js"></script>
+    <![endif]-->
+    <!-- 百度统计 -->
+    <script>
+        var _hmt = _hmt || [];
+        (function () {
+            var hm = document.createElement("script");
+            hm.src = "https://hm.baidu.com/hm.js?e1162dd4cc5b7c28280f6307913ba5f0";
+            var s = document.getElementsByTagName("script")[0];
+            s.parentNode.insertBefore(hm, s);
+        })();
+    </script>
+
+</head>
+<body>
+    <div id="app">
+        <!-- 头部 -->
+        <header class="headerBox">
+            <div class="head">
+                <div class="logo"><img src="officialImg/logo2.png" style="width:138px; height:40px;" /></div>
+                <nav class="navBox">
+                    <ul>
+                        <li><a href="javascript:;">报考条件</a></li>
+                        <li><a href="javascript:;">报考流程</a></li>
+                        <li><a href="javascript:;">考试大纲</a></li>
+                        <li><a href="javascript:;">备考资料</a></li>
+                        <li><a href="javascript:;">班型分类</a></li>
+                        <li><a href="javascript:;">常见问题</a></li>
+                    </ul>
+                </nav>
+            </div>
+        </header>
+
+        <!-- banner -->
+        <div class="bannerBox">
+            <div class="banner">
+                <a href=""><img src="officialImg/banner.jpg" alt="" /></a>
+            </div>
+            <div class="bkzn">
+                <ul class="clearfix">
+                    <li>
+                        <a href="">
+                            <i class="icon"><img src="officialImg/bkzn-icon-01.png" alt="" /></i>
+                            <p>报考条件</p>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="">
+                            <i class="icon"><img src="officialImg/bkzn-icon-02.png" alt="" /></i>
+                            <p>报考时间</p>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="">
+                            <i class="icon"><img src="officialImg/bkzn-icon-03.png" alt="" /></i>
+                            <p>报考流程</p>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="">
+                            <i class="icon"><img src="officialImg/bkzn-icon-04.png" alt="" /></i>
+                            <p>考试科目</p>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="">
+                            <i class="icon"><img src="officialImg/bkzn-icon-05.png" alt="" /></i>
+                            <p>报名费用</p>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="">
+                            <i class="icon"><img src="officialImg/bkzn-icon-06.png" alt="" /></i>
+                            <p>备考资料</p>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+
+        <!-- 报考条件 -->
+        <div class="bktj container stamp">
+            <div class="title">
+                <h2>2026执业药师<span>报考条件</span></h2>
+            </div>
+            <div class="content clearfix">
+                <ul>
+                    <li>
+                        <h3><i class="icon icon-01"></i>学历要求</h3>
+                        <p>报考执业药师要求大专及以上学历，且需要经国家主管教育部门批准具有办学教育资格的... <a href="">了解详情 &gt;</a></p>
+                        <a class="btn" href="">查看国家认可学历 </a>
+                    </li>
+                    <li>
+                        <h3><i class="icon icon-02"></i>专业要求</h3>
+                        <p>报考执业药师要求药学类、中药学类相关专业，具体专业有：药学、药物制剂、临床药学、中药学... <a href="">了解详情 &gt;</a></p>
+                        <a class="btn" href="">查询专业对照表 </a>
+                    </li>
+                    <li>
+                        <h3><i class="icon icon-03"></i>工作年限</h3>
+                        <p>报考执业药师大专要求在药学或中药学岗位工作满5年，本科学历要求在药学或中药学岗位工作满... <a href="">了解详情 &gt;</a></p>
+                        <a class="btn" href="">工作年限如何计算 </a>
+                    </li>
+                    <li>
+                        <h3><i class="icon icon-04"></i>免试要求</h3>
+                        <p>按照国家有关规定取得（中）药学或（中）医学专业高级职称并在（中）药学岗位工作的，可免试中药学... <a href="">了解详情 &gt;</a></p>
+                        <a class="btn" href="">免试条件具体要求 </a>
+                    </li>
+                </ul>
+                <div class="formBox">
+                    <h3>报名条件在线审核通道</h3>
+                    <div class="form">
+                        <select v-model="formData.education">
+                            <option value="">请选择您的最高学历</option>
+                            <option v-for="(edu,index) in eduVal" :key="index" :value="edu">{{edu}}</option>
+                        </select>
+                        <select v-model="formData.major">
+                            <option value="">请选择您的专业</option>
+                            <option v-for="(major,index) in majorVal" :key="index" :value="major">{{major}}</option>
+                        </select>
+                        <select v-model="formData.byear">
+                            <option value="">请选择您的毕业年限</option>
+                            <option v-for="(year,index) in yearVal" :key="index" :value="year">{{year}}</option>
+                        </select>
+                        <input type="tel" v-model="formData.userPhone" placeholder="请输入您的手机号" />
+                        <button type="button" @click="submit('报名条件在线审核通道')">提交获取审核结果</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- 报考流程 -->
+        <div class="bklc container stamp">
+            <div class="title">
+                <h2>2026执业药师<span>报考流程指导</span></h2>
+                <p>一键开启免费提醒服务，每个环节提前短信通知，轻松掌控报考动态</p>
+            </div>
+            <div class="step">
+                <ul>
+                    <li>
+                        <span class="num">01</span>
+                        <h3>用户注册</h3>
+                        <p>进入中国人事考试网→注册账号，设置密码→浏览报名协议→填写报名表...</p>
+                        <a href="">注册入口<i class="icon-arrow"></i></a>
+                    </li>
+                    <li>
+                        <span class="num">02</span>
+                        <h3>上传照片</h3>
+                        <p>登录中国人事考试网-根据要求去上传本人近期二寸免冠照片...</p>
+                        <a href="">照片要求<i class="icon-arrow"></i></a>
+                    </li>
+                    <li>
+                        <span class="num">03</span>
+                        <h3>打印报名表</h3>
+                        <p>报考人员按引导填好打印表，点击报名信息确认打印报名表,打印后...</p>
+                        <a href="">注册入口<i class="icon-arrow"></i></a>
+                    </li>
+                    <li>
+                        <span class="num">04</span>
+                        <h3>网上审核</h3>
+                        <p>执业药师分考前审核和考后审核两种，考前审核-般在网上报名之后...</p>
+                        <a href="">审核要求<i class="icon-arrow"></i></a>
+                    </li>
+                </ul>
+                <ul class="last">
+                    <li>
+                        <span class="num">05</span>
+                        <h3>网上缴费</h3>
+                        <p>完成现场资格审核的报考人员应根据要求进行网上缴费，缴费成功才算报...</p>
+                        <a href="">费用标准<i class="icon-arrow"></i></a>
+                    </li>
+                    <li>
+                        <span class="num">06</span>
+                        <h3>打印准考证</h3>
+                        <p>执业药师准考证打印时间为：考前一周开始，准考证打印入口统一在...</p>
+                        <a href="">打印入口<i class="icon-arrow"></i></a>
+                    </li>
+                    <li>
+                        <span class="num">07</span>
+                        <h3>参加考试</h3>
+                        <p>2026年执业药师考试时间预计在10月19-20日，具体科目考试时间...</p>
+                        <a href="">考试时间<i class="icon-arrow"></i></a>
+                    </li>
+                </ul>
+            </div>
+            <div class="form-wrap clearfix">
+                <div class="form-title">
+                    <i class="icon-info"><img src="officialImg/icon-info.png" /></i>
+                    <p>免费提醒服务</p>
+                </div>
+                <div class="formBox">
+                    <div class="clearfix">
+                        <input type="text" v-model="formData.userName" placeholder="您的称呼" />
+                        <input class="tel" type="text" v-model="formData.userPhone" placeholder="请输入您的手机号码" />
+                        <button type="button" @click="submit2('报考流程免费提醒服务')">一键开启</button>
+                    </div>
+                    <p>温馨提示：该服务内容将通过短信形式下发至您的手机，请仔细核对手机号是否正确，以免影响正常使用！</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- 考试安排 -->
+        <div class="ksap stamp" style="display:none!important;">
+            <div class="container">
+                <div class="title">
+                    <h2>2026执业药师<span>考试科目/时间安排</span></h2>
+                    <p>执业药师考试科目分为药学类和中药学类，各科单独，考试独立记分，考生可按需查看详情</p>
+                </div>
+                <div class="content">
+                    <div class="tableBox">
+                        <table>
+                            <tbody>
+                                <tr>
+                                    <th>日期</th>
+                                    <th>时间</th>
+                                    <th>科目</th>
+                                    <th>满分</th>
+                                    <th>合格标准</th>
+                                </tr>
+                                <tr>
+                                    <td rowspan="2">10月19日（预估）</td>
+                                    <td>9:00-11:30</td>
+                                    <td>药学（中药学）专业知识一</td>
+                                    <td>120</td>
+                                    <td><a href="">查看详情</a></td>
+                                </tr>
+                                <tr>
+                                    <td>14:00-16:30</td>
+                                    <td>药学（中药学）专业知识二</td>
+                                    <td>120</td>
+                                    <td><a href="">查看详情</a></td>
+                                </tr>
+                                <tr>
+                                    <td rowspan="2">10月20日（预估）</td>
+                                    <td>9:00-11:30</td>
+                                    <td>药事管理与法规</td>
+                                    <td>120</td>
+                                    <td><a href="">查看详情</a></td>
+                                </tr>
+                                <tr>
+                                    <td>14:00-16:30</td>
+                                    <td>药学综合知识与技能</td>
+                                    <td>120</td>
+                                    <td><a href="">查看详情</a></td>
+                                </tr>
+                            </tbody>
+                        </table>
+                        <p class="info">成绩管理办法：这也药师资格考试成绩实行滚动管理，参加四个科目考试的人员必须在连续两个考试年度内通过全部科目；面试部分科目的人员须在当年通过应试科目</p>
+                        <div class="btn-group">
+                            <a class="btn-1" href="">历年考试真题 &gt;&gt;</a>
+                            <a class="btn-2" href="">全科备考指导 &gt;&gt;</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- 报考政策  -->
+        <!-- <div class="bkzc stamp">
+          <div class="container">
+            <div class="title">
+              <h2>2025年各省市执业药师<span>报名时间及政策查询</span></h2>
+              <p>2025年执业药师考试报名信息已公布，各地报名时间、政策有所不同，请按照自身报考地区进行查询</p>
+            </div>
+            <div class="form-wrap">
+              <ul class="select-group clearfix">
+                <li v-for="(item, index) in city" :key="index">
+                  <label><input type="radio" name="city" :value="item" v-model="formData.area" />{{item}}</label>
+                </li>
+              </ul>
+              <div class="formBox">
+                <div class="city-info">
+                  <p>当前城市：<span>{{formData.area==''?"请选择":formData.area}}</span></p>
+                </div>
+                <div class="form">
+                  <div class="clearfix">
+                    <input type="tel" v-model="userPhone" placeholder="请输入您的手机号码" />
+                    <button type="button" @click="submit2('报考时间与政策查询')">立即查询</button>
+                  </div>
+                  <p>查询结果稍后将通过短信的形式下发至您的手机，请注意查收！</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div> -->
+        <!-- 免费资料 -->
+        <div class="mfzl container stamp">
+            <div class="title">
+                <h2>2026执业药师<span>核心资料免费领取</span></h2>
+                <p>掌握核心资料，紧跟考试趋势，领先他人一步</p>
+            </div>
+            <div class="clearfix">
+                <div class="docBox fl">
+                    <ul>
+                        <li>
+                            <a href="javascript:;" class="fl"><i class="icon-zip"></i>2025年《药学专业知识（一）》真题解析</a>
+                            <a href="javascript:;" class="fr"><i class="icon-zip"></i>2025年《药学专业知识（一）》真题解析</a>
+                        </li>
+                        <li>
+                            <a href="javascript:;" class="fl"><i class="icon-zip"></i>2025年《药学专业知识（二）》真题解析</a>
+                            <a href="javascript:;" class="fr"><i class="icon-zip"></i>2025年《药学专业知识（二）》真题解析</a>
+                        </li>
+                        <li>
+                            <a href="javascript:;" class="fl"><i class="icon-zip"></i>2024年《药事法律法规）》真题解析</a>
+                            <a href="javascript:;" class="fr"><i class="icon-zip"></i>2024年《药学专业知识（一）》真题解析</a>
+                        </li>
+                        <li>
+                            <a href="javascript:;" class="fl"><i class="icon-zip"></i>2023年《药事管理与法规》真题带解析</a>
+                            <a href="javascript:;" class="fr"><i class="icon-zip"></i>2023年《药学专业知识（二）》真题解析</a>
+                        </li>
+                    </ul>
+                    <ul class="last">
+                        <li>
+                            <a href="javascript:;" class="fl"><i class="icon-doc"></i>2025年《法律法规》真题解析</a>
+                            <a href="javascript:;" class="fr"><i class="icon-doc"></i>2025年《药学专业知识（一）》真题解析</a>
+                        </li>
+                        <li>
+                            <a href="javascript:;" class="fl"><i class="icon-doc"></i>2026药一基础精讲1-8章全</a>
+                            <a href="javascript:;" class="fr"><i class="icon-doc"></i>2026年中药一基础精讲课讲义（1-5章全部内容）</a>
+                        </li>
+                        <li>
+                            <a href="javascript:;" class="fl"><i class="icon-doc"></i>2026药二基础精讲1-16章_全</a>
+                            <a href="javascript:;" class="fr"><i class="icon-doc"></i>2026中药二基础精讲课讲义（1-28章全部内容）</a>
+                        </li>
+                        <li>
+                            <a href="javascript:;" class="fl"><i class="icon-doc"></i>2026药综基础精讲1-17章全</a>
+                            <a href="javascript:;" class="fr"><i class="icon-doc"></i>2026中药综合基础精讲课讲义（1-13章全部内容）</a>
+                        </li>
+                    </ul>
+                </div>
+                <div id="packForm" class="formBox fr">
+                    <div class="top">
+                        <h3>2026年药师备考资料包</h3>
+                        <p>试题+考点+笔记</p>
+                        <ul class="clearfix">
+                            <li class="fl">
+                                <p>近2年</p> <span>考试试题剖析</span>
+                            </li>
+                            <li class="fr">
+                                <p>1000道</p> <span>考试试题剖析</span>
+                            </li>
+                        </ul>
+                    </div>
+                    <select v-model="formData.major">
+                        <option value="">请选择您的考试类别</option>
+                        <option v-for="subItem in subValue" :key="subItem" :value="subItem">{{subItem}}</option>
+                    </select>
+                    <input type="text" placeholder="领取人姓名" v-model="formData.userName">
+                    <input type="tel" placeholder="请输入您的手机号码" v-model="formData.userPhone">
+                    <button type="button" @click="submit2('获取备考资料')">打包下载 <i><img src="officialImg/form-icon-arrow.png"></i></button>
+                </div>
+            </div>
+        </div>
+
+        <!-- 班型分类 -->
+        <div class="bxfl stamp">
+            <div class="container">
+                <div class="title white">
+                    <h2><span>多维度</span> 量身定制班型</h2>
+                    <p>根据不同基础阶梯，定制相应班型，总有一个适合你</p>
+                </div>
+                <div class="tabBox">
+                    <div class="tab-nav">
+                        <ul>
+                            <li style="display: none;">网络课程</li>
+                            <li class="on">高端课程</li>
+                        </ul>
+                    </div>
+                    <div class="tab-content">
+                        <div class="live item" style="display: none;">
+                            <div class="box">
+                                <h3>无忧提分班</h3>
+                                <ul class="clearfix">
+                                    <li>动画基础网课</li>
+                                    <li>精品习题网课</li>
+                                    <li>强化网络集训营</li>
+                                </ul>
+                                <a href="">班型详情咨询</a>
+                            </div>
+                            <div class="box">
+                                <h3>至尊直播班</h3>
+                                <ul class="clearfix">
+                                    <li>动画基础网课</li>
+                                    <li>大咖精讲网课</li>
+                                    <li>精品习题网课</li>
+                                    <li>核心考点精讲直播课</li>
+                                    <li>强化网络集训营</li>
+                                    <li>冲刺网络押题班</li>
+                                    <li>闭关刷题课</li>
+                                </ul>
+                                <a href="">班型详情咨询</a>
+                            </div>
+                            <div class="box">
+                                <h3>铭师集训班</h3>
+                                <ul class="clearfix">
+                                    <li>动画基础网课</li>
+                                    <li>大咖精讲网课</li>
+                                    <li>精品习题网课</li>
+                                    <li>面授核心考点基础课</li>
+                                    <li>省会强化面授集训营</li>
+                                    <li>冲刺面授押题课</li>
+                                    <li>闭关刷题课</li>
+                                </ul>
+                                <a href="">班型详情咨询</a>
+                            </div>
+                            <div class="box mr-0">
+                                <h3>金牌网络班</h3>
+                                <ul class="clearfix">
+                                    <li>动画基础网课</li>
+                                    <li>精品习题网课</li>
+                                </ul>
+                                <a href="">班型详情咨询</a>
+                            </div>
+                            <div class="clearfix"></div>
+                        </div>
+                        <div class="face item">
+                            <div class="box">
+                                <h3>精讲基础班</h3>
+                                <ul class="clearfix">
+                                    <li>基础网课</li>
+                                    <li>精讲网课</li>
+                                    <li>精品习题网课</li>
+                                    <li>名师精讲直播课</li>
+                                    <li>省会强化面授集训营</li>
+                                    <li>名师专属冲刺网络加强押题课</li>
+                                    <li>闭关刷题课</li>
+                                    <li>考前总复习</li>
+                                    <li>考前速效救命课程</li>
+                                    <li>考前最后8小时课程</li>
+                                </ul>
+                                <a href="">班型详情咨询</a>
+                            </div>
+                            <div class="box">
+                                <h3>无忧全程班</h3>
+                                <ul class="clearfix">
+                                    <li>基础网课</li>
+                                    <li>精讲网课</li>
+                                    <li>精品习题网课</li>
+                                    <li>名师核心考点精讲直播课</li>
+                                    <li>省会强化面授集训营</li>
+                                    <li>名师专属冲刺网络加强押题课</li>
+                                    <li>闭关刷题课</li>
+                                    <li>考前总复习</li>
+                                    <li>考前速效救命课程</li>
+                                    <li>考前最后8小时课程</li>
+                                    <li>名师带班一对一私教辅导</li>
+                                </ul>
+                                <a href="">班型详情咨询</a>
+                            </div>
+                            <div class="box mr-0">
+                                <h3>VIP精品班</h3>
+                                <ul class="clearfix">
+                                    <li>基础课程</li>
+                                    <li>精讲课程</li>
+                                    <li>精品习题网课</li>
+                                    <li>名师精讲直播课</li>
+                                    <li>名师强化网络集训营</li>
+                                    <li>名师专属冲刺网络加强押题课</li>
+                                    <li>闭关刷题课</li>
+                                    <li>考前最后8小时课程</li>
+                                </ul>
+                                <a href="">班型详情咨询</a>
+                            </div>
+                            <div class="clearfix"></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="btnBox">
+                    <a href="">免费定制专属班型 <i class="icon-arrow"></i></a>
+                </div>
+            </div>
+        </div>
+
+        <!-- 服务优势 -->
+        <div class="fwys">
+            <div class="container">
+                <div class="title">
+                    <h2><span>七维一体</span>助力无忧通关</h2>
+                    <p>备考阶段全覆盖，稳扎稳打步步为营</p>
+                </div>
+                <div class="content">
+                    <ul>
+                        <li>
+                            <a href="">
+                                <i class="icon icon-01"></i>
+                                <h3>基础精讲</h3>
+                                <p>根据2026年教材及考试大纲，进行知识点讲解，并配合章节练习让学员掌握教材中重要知识点，夯实基础</p>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="">
+                                <i class="icon icon-02"></i>
+                                <h3>直播教学</h3>
+                                <p>每天定时直播，核心考点专题化、模块化，在线解析答疑，交互式学习，消灭疑难杂症</p>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="">
+                                <i class="icon icon-03"></i>
+                                <h3>精炼习题</h3>
+                                <p>每周精选习题作业，直击核心考点，逐个击破知识模块，阶段巩固，消化所学内容，探究命题方向</p>
+                            </a>
+                        </li>
+                        <li class="mr-0">
+                            <a href="">
+                                <i class="icon icon-04"></i>
+                                <h3>真题导学</h3>
+                                <p>讲解历年真题，了解命题变化和考试趋势，分析考情。让考生学习有规划，备考有方向</p>
+                            </a>
+                        </li>
+                    </ul>
+                    <ul class="last">
+                        <li>
+                            <a href="">
+                                <i class="icon icon-05"></i>
+                                <h3>强化冲刺</h3>
+                                <p>分析考点，巧妙搭建教材体系及知识框架，重点提炼，薄化教材，明确考试方向，掌握应试内容</p>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="">
+                                <i class="icon icon-06"></i>
+                                <h3>模考点睛</h3>
+                                <p>讲练结合，根据考试规律研究成果，预测考试范围和重要考点，临考强化，扫除备考障碍，助力考试</p>
+                            </a>
+                        </li>
+                        <li class="mr-0">
+                            <a href="">
+                                <i class="icon icon-07"></i>
+                                <h3>考前集训</h3>
+                                <p>临考面授，以题带点，梳理教材脉络。模拟卷考试，查漏补缺，预测考点，讲授答题技巧，提升做题准确率</p>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="btnBox">
+                    <a href="">点击了解详情 <i class="icon-arrow"></i></a>
+                </div>
+            </div>
+        </div>
+
+        <!-- 常见问题 -->
+        <div class="faq stamp">
+            <div class="container">
+                <div class="content">
+                    <div class="title">
+                        <h2>执业药师<span>常见问题答疑</span></h2>
+                        <p>把每个环节都了解清楚  报考更顺心</p>
+                    </div>
+                    <ul class="clearfix">
+                        <li>
+                            <a href="">
+                                <i class="icon-faq"></i>
+                                <p>哪些专业可以考执业药师？</p>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="">
+                                <i class="icon-faq"></i>
+                                <p>护士可以考执业药师吗？</p>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="">
+                                <i class="icon-faq"></i>
+                                <p>执业中药师和西药师的区别？</p>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="">
+                                <i class="icon-faq"></i>
+                                <p>参加执业药师考试有年龄限制吗？</p>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="">
+                                <i class="icon-faq"></i>
+                                <p>参加执业药师考试的流程？</p>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="">
+                                <i class="icon-faq"></i>
+                                <p>需要准备些什么材料？</p>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="">
+                                <i class="icon-faq"></i>
+                                <p>执业药师工作年限怎么算？</p>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="">
+                                <i class="icon-faq"></i>
+                                <p>执业药师工作年限怎么算？</p>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="">
+                                <i class="icon-faq"></i>
+                                <p>2026年执业药师什么时候考试？</p>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="">
+                                <i class="icon-faq"></i>
+                                <p>报考执业药师对社保年限有要求吗？</p>
+                            </a>
+                        </li>
+                    </ul>
+                    <div class="btnBox">
+                        <a href="">免费咨询其他问题 <i class="icon-arrow"></i></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- 预约讲师 -->
+        <div class="yyjs" style="display:none;">
+            <div class="container">
+                <div class="tag">
+                    <p>每天仅限<br />10个名额</p>
+                </div>
+                <div class="title white">
+                    <h2><span>免费试听</span> 满意后再报名</h2>
+                    <p>特约导师免费直播课预约</p>
+                </div>
+                <div class="formBox">
+                    <div class="input-group">
+                        <label for="userName"><img src="img/icon-user.png" /></label>
+                        <input type="text" v-model="formData.userName" placeholder="请输入您的姓名" />
+                    </div>
+                    <div class="input-group">
+                        <label for="userPhone"><img src="img/icon-phone.png" /></label>
+                        <input type="text" v-model="formData.userPhone" placeholder="请输入手机号码" />
+                    </div>
+                    <button type="button" @click="submit2('预约免费试听')">立即预约免费试听</button>
+                </div>
+            </div>
+        </div>
+
+        <!-- 底部 -->
+        <footer class="footerBox" style="display:none;">
+            <ul>
+                <li><a href="https://www.rundejy.com/yaoshi/" target="_blank">润德执业药师网</a></li>
+                <li><a rel="nofollow" href="http://beian.miit.gov.cn/" target="_blank">粤ICP备17046152号</a></li>
+            </ul>
+        </footer>
+
+        <!-- 模态弹窗 -->
+        <div class="ModalPop">
+            <div class="mask"></div>
+            <div class="success">
+                <i class="success-icon"><img src="https://www.gdrunde.com/images/success-icon.png"></i>
+                <h3>恭喜！提交成功</h3>
+                <p>您的专属老师将在24小时内联系您，敬请留意！</p>
+                <button class="closePop" type="button">我知道了</button>
+            </div>
+            <div class="tips">
+                <div class="tit"><i class="tips-icon"><img src="https://www.gdrunde.com/images/tips-icon.png"></i>提示</div>
+                <p id="tipsInfo">手机号码必须填写噢~</p>
+                <button class="confirmBtn" type="button">确认</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- js引入 -->
+    <script src="Scripts/officialJS/jquery-3.5.1.min.js"></script>
+    <script src="Scripts/officialJS/vue.min.js"></script>
+    <script src="Scripts/officialJS/common.js"></script>
+</body>
+</html>

@@ -1,0 +1,46 @@
+﻿body, h1, h2, h3, h4, h5, h6, p, dl, dd, figure {
+    margin: 0;
+}
+
+em, i, cite {
+    font-style: normal;
+}
+
+ul, ol {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+mark {
+    background: none;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+a, button, input, select {
+    outline: none;
+}
+
+button {
+    cursor: pointer;
+}
+/* 点击搜索框获取焦点 placeholder消失-开始 */
+input:focus::-webkit-input-placeholder, textarea:focus::-webkit-input-placeholder {
+    color: transparent !important;
+}
+
+input:focus:-moz-placeholder, textarea:focus:-moz-placeholder {
+    color: transparent !important;
+}
+
+input:focus::-moz-placeholder, textarea:focus::-moz-placeholder {
+    color: transparent !important;
+}
+
+input:focus:-ms-input-placeholder, textarea:focus:-ms-input-placeholder {
+    color: transparent !important;
+}
