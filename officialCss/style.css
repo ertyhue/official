@@ -1068,7 +1068,7 @@ select {
             .bxfl .tab-content .box li {
                 max-width: 320px;
                 float: left;
-                background: url(../img/bxfl-list-type.png) no-repeat left center;
+                background: url(../officialImg/bxfl-list-type.png) no-repeat left center;
                 font-size: 22px;
                 padding-left: 22px;
                 margin: 8px;
@@ -1665,3 +1665,4 @@ select {
         transform: scale3d(1, 1, 1);
     }
 }
+
